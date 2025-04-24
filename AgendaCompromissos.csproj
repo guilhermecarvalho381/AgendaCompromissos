@@ -46,6 +46,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\Banco.cs" />
+    <Compile Include="Forms\CadastroForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CadastroForm.Designer.cs">
+      <DependentUpon>CadastroForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NovoCompForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NovoCompForm.Designer.cs">
+      <DependentUpon>NovoCompForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +73,19 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\Sessao.cs" />
+    <EmbeddedResource Include="Forms\CadastroForm.resx">
+      <DependentUpon>CadastroForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NovoCompForm.resx">
+      <DependentUpon>NovoCompForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -77,10 +109,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DAL\" />
-    <Folder Include="Forms\" />
     <Folder Include="Models\" />
-    <Folder Include="Util\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\Script Entrevista SQL Server.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
